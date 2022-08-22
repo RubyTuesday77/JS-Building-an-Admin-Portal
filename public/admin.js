@@ -36,18 +36,6 @@ function renderBook(book) {
         })
     })
 
-    let deleteButton = document.createElement('button')  // Create delete button to remove book from admin portal
-    deleteButton.textContent = 'Delete' // "Delete" will be displayed on button
-
-    deleteButton.addEventListener('click', () => {
-        fetch('http://localhost:3001/removeBook/{bookId}', {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-    })
-
     li.append(quantityInput, saveButton)
     root.append(li)
 }
